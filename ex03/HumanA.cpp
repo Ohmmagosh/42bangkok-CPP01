@@ -1,26 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   HumanA.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: psuanpro <Marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/18 21:35:03 by psuanpro          #+#    #+#             */
-/*   Updated: 2023/02/18 23:39:42 by psuanpro         ###   ########.fr       */
+/*   Created: 2023/02/19 01:47:19 by psuanpro          #+#    #+#             */
+/*   Updated: 2023/02/19 02:52:39 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include "Zombie.hpp"
+#include "HumanA.hpp"
+#include "Weapon.hpp"
 
-void randomChump( std::string name );
-
-int	main(void){
-
-	Zombie	hello_zombie("zombie_1");
-
-	hello_zombie.announce();
-	randomChump("random_Zombiำ2");
-
-	return (0);
+HumanA::HumanA(std::string name, Weapon weapon): _name(name) ,_weapon(weapon){
+	std::cout << "humanA create" << this->_name << std::endl;
 }
+
+HumanA::~HumanA(void){
+	std::cout << "humanA destroy" << this->_name << std::endl;
+}
+
+void HumanA::attack(){
+	std::cout << this->_name << " attacks with their " << this->_weapon.getType() <<std::endl;
+}
+

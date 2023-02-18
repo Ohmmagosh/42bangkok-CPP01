@@ -1,26 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   zombieHorde.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: psuanpro <Marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/18 21:35:03 by psuanpro          #+#    #+#             */
-/*   Updated: 2023/02/18 23:39:42 by psuanpro         ###   ########.fr       */
+/*   Created: 2023/02/18 23:03:24 by psuanpro          #+#    #+#             */
+/*   Updated: 2023/02/18 23:54:00 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
 #include "Zombie.hpp"
 
-void randomChump( std::string name );
+Zombie* zombieHorde( int N, std::string name ){
+	Zombie	*new_zombie;
 
-int	main(void){
+	new_zombie = new Zombie[N];
 
-	Zombie	hello_zombie("zombie_1");
-
-	hello_zombie.announce();
-	randomChump("random_Zombiำ2");
-
-	return (0);
+	return (new_zombie);
 }

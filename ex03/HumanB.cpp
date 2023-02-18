@@ -1,26 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   HumanB.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: psuanpro <Marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/18 21:35:03 by psuanpro          #+#    #+#             */
-/*   Updated: 2023/02/18 23:39:42 by psuanpro         ###   ########.fr       */
+/*   Created: 2023/02/19 01:47:24 by psuanpro          #+#    #+#             */
+/*   Updated: 2023/02/19 02:53:13 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include "Zombie.hpp"
+#include "HumanB.hpp"
 
-void randomChump( std::string name );
-
-int	main(void){
-
-	Zombie	hello_zombie("zombie_1");
-
-	hello_zombie.announce();
-	randomChump("random_Zombiำ2");
-
-	return (0);
+HumanB::HumanB(std::string name): _name(name){
+	std::cout << "humanA create" << this->_name << std::endl;
 }
+
+HumanB::~HumanB(){
+	std::cout << "humanA destroy" << this->_name << std::endl;
+}
+
+void	HumanB::attack(){
+	std::cout << this->_name << " attacks with their " << this->_weapon->getType() <<std::endl;
+}
+
+void	HumanB::setWeapon(Weapon& weapon){
+	this->_weapon = &weapon;
+}
+
