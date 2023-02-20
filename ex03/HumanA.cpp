@@ -6,14 +6,14 @@
 /*   By: psuanpro <Marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/19 01:47:19 by psuanpro          #+#    #+#             */
-/*   Updated: 2023/02/19 02:52:39 by psuanpro         ###   ########.fr       */
+/*   Updated: 2023/02/19 16:11:30 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanA.hpp"
 #include "Weapon.hpp"
 
-HumanA::HumanA(std::string name, Weapon weapon): _name(name) ,_weapon(weapon){
+HumanA::HumanA(std::string name, Weapon &weapon): _name(name) ,_weapon(weapon){
 	std::cout << "humanA create" << this->_name << std::endl;
 }
 
